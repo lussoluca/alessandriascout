@@ -6,6 +6,7 @@ import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { Hero2 } from '@/components/Hero2'
 import { Groups } from '@/components/Groups'
 
 import image1 from '@/images/photos/image-1.jpg'
@@ -18,7 +19,7 @@ function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
-    <div className="mt-8 sm:mt-16">
+    <div className="mt-4 sm:mt-0">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
@@ -53,7 +54,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Hero />
+        <Hero2 />
         <Photos />
         <Groups />
         <Faqs />
