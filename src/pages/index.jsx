@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ScoutAlessandria</title>
+        <title>AlessandriaScout</title>
         <meta
           name="description"
           content="Lorem ipsum."
