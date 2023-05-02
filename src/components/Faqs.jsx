@@ -6,53 +6,52 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'Come ci si iscrive?',
       answer:
         'Well no, but if you move your company offshore you can probably ignore it.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
+      question: 'Che attività si fanno?',
       answer: 'Absolutely, we are happy to take your money in all forms.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'Lorem ipsum?',
       answer:
         'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'Lorem ipsum?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
     {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+      question: 'Lorem ipsum?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
     {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+      question: 'Lorem ipsum?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: 'Lorem ipsum?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      question: 'Lorem ipsum?',
+      answer:
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'Lorem ipsum?',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
     },
   ],
 ]
@@ -78,12 +77,8 @@ export function Faqs() {
             id="faq-title"
             className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Frequently asked questions
+            Domande frequenti
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
-          </p>
         </div>
         <ul
           role="list"
