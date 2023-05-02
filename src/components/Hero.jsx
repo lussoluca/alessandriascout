@@ -7,7 +7,7 @@ export function Hero() {
         AlessandriaScout
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        Cari scout, la felicità non dipende dalle ricchezze né dal successo. Guardate al lato bello delle cose e non al lato brutto. Il vero modo di essere felici è quello di procurare la felicità agli altri.<br/>Preoccupatevi di lasciare questo mondo un po' migliore di come lo avete trovato. Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.
+        Cari scout, la felicità non dipende dalle ricchezze né dal successo. Guardate al lato bello delle cose e non al lato brutto. Il vero modo di essere felici è quello di procurare la felicità agli altri.<br/>Preoccupatevi di lasciare questo mondo un po&apos; migliore di come lo avete trovato. Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.
       </p>
     </Container>
   )

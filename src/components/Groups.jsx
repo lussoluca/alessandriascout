@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const groups = [
     {
       name: 'Alessandria 1',
@@ -43,7 +45,7 @@ const groups = [
           >
             {groups.map((group) => (
               <li key={group.name}>
-                <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={group.imageUrl} alt="" />
+                <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={group.imageUrl} alt="" width={800} height={1600} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{group.name}</h3>
                 <p className="text-base leading-7 text-gray-600">{group.role}</p>
                 <ul role="list" className="mt-6 flex gap-x-6">
