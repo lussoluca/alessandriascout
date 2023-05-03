@@ -1,15 +1,13 @@
 export function Quote() {
     return (
-      <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-8 lg:px-8">
+      <section className="hidden lg:block relative isolate overflow-hidden bg-white px-6 lg:px-8">
        <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <figure className="mt-10">
-            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+            <blockquote className="text-center text-sm font-semibold leading-8 text-gray-900 sm:text-xl sm:leading-9">
               <p>
-                “Cari scout, la felicità non dipende dalle ricchezze né dal successo.
-                Guardate al lato bello delle cose e non al lato brutto.
-                Il vero modo di essere felici è quello di procurare la felicità agli altri.
+                "Il vero modo di essere felici è quello di procurare la felicità agli altri.
                 <br/>Preoccupatevi di lasciare questo mondo un po&apos; migliore di come lo avete trovato. 
-                Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.”
+                <br/>Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.”
               </p>
             </blockquote>
             <figcaption className="mt-5">
