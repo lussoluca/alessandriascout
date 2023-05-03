@@ -1,5 +1,12 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
+const navigation = [
+  { name: 'Storia', href: '#' },
+  { name: 'Chi siamo', href: '#' },
+  { name: 'Blog', href: '#' },
+  { name: 'Contattaci', href: '#' },
+]
+
 export default function Document(props) {
   let pageProps = props.__NEXT_DATA__?.props?.pageProps
 

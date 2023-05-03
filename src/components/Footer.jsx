@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { MainMenu } from '@/data/MainMenu'
 
 export function Footer() {
   return (
@@ -12,9 +13,9 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="">Storia</NavLink>
-              <NavLink href="">Chi siamo</NavLink>
-              <NavLink href="">Blog</NavLink>
+            {MainMenu.map((item) => (
+              <NavLink href="{item.href}">{item.name}</NavLink>
+            ))}
             </div>
           </nav>
         </div>
