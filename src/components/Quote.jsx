@@ -5,9 +5,9 @@ export function Quote() {
           <figure className="mt-10">
             <blockquote className="text-center text-sm font-semibold leading-8 text-gray-900 sm:text-xl sm:leading-9">
               <p>
-                "Il vero modo di essere felici è quello di procurare la felicità agli altri.
+              &quot;Il vero modo di essere felici è quello di procurare la felicità agli altri.
                 <br/>Preoccupatevi di lasciare questo mondo un po&apos; migliore di come lo avete trovato. 
-                <br/>Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.”
+                <br/>Mantenete la vostra promessa di esploratori anche quando non sarete più ragazzi e Dio vi aiuti in questo.&quot;
               </p>
             </blockquote>
             <figcaption className="mt-5">
