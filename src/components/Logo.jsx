@@ -1,7 +1,7 @@
 export function Logo(props) {
   return (
     <svg  version="1.1" id="Layer_1" width="348.011" height="397.608"
-	 viewBox="0 0 348.011 397.608" overflow="visible" enable-background="new 0 0 348.011 397.608" class="h-12 w-12">
+	 viewBox="0 0 348.011 397.608" overflow="visible" enableBackground="new 0 0 348.011 397.608" class="h-12 w-12">
 <path fill="#410E82" stroke="#3F107A" stroke-width="0.1764" stroke-linecap="round" stroke-linejoin="round" d="M197.483,306.281
 	c0.173,0.648,0.598,1.201,1.18,1.536c0.581,0.337,1.271,0.427,1.921,0.254l12.3-3.296c0.878-0.234,1.563-0.922,1.792-1.801
 	c0.231-0.879-0.026-1.813-0.676-2.451c-0.647-0.636-1.588-0.875-2.462-0.628l-17.385,4.658c-3.694,0.99-7.492-1.202-8.48-4.896

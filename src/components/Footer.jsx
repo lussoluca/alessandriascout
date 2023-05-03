@@ -14,7 +14,7 @@ export function Footer() {
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
             {MainMenu.map((item) => (
-              <NavLink href="{item.href}">{item.name}</NavLink>
+              <NavLink href="{item.href}" key={item.name}>{item.name}</NavLink>
             ))}
             </div>
           </nav>
