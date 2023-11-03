@@ -5,13 +5,13 @@ import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image5 from '@/images/photos/istockphoto-1173582449-1024x1024.jpg'
 
 export function Photos() {
     let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
     return (
-      <div className="sm:mt-0 pt-10">
+      <div className="sm:mt-0 lg:mb-0 pt-10 mb-20">
         <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
           {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
             <div
