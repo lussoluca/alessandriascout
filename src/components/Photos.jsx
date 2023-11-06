@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
+import image1 from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
+import image2 from '@/images/photos/istockphoto-1173584509-1024x1024.jpg'
+import image3 from '@/images/photos/istockphoto-1485544927-1024x1024.jpg'
+import image4 from '@/images/photos/istockphoto-1089394888-1024x1024.jpg'
 import image5 from '@/images/photos/istockphoto-1173582449-1024x1024.jpg'
 
 export function Photos() {
