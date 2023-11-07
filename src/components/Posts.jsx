@@ -13,7 +13,7 @@ export function Posts() {
                         id="post-title"
                         className="font-display text-3xl tracking-tight text-slate-900 mb-10 sm:text-4xl"
                     >
-                        Post recenti
+                        Dal blog
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
