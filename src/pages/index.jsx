@@ -6,6 +6,7 @@ import {Quote} from '@/components/Quote'
 import {Hero} from '@/components/Hero'
 import {Photos} from '@/components/Photos'
 import {Groups} from '@/components/Groups'
+import {Posts} from '@/components/Posts'
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
                 <Quote/>
                 <Groups/>
                 <Faqs/>
+                <Posts/>
             </main>
             <Footer/>
         </>
