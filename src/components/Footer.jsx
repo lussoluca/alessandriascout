@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { Container } from '@/components/Container'
+import Container from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { MainMenu } from '@/data/MainMenu'
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container>

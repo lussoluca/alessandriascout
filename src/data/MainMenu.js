@@ -1,7 +1,7 @@
 export const MainMenu = [
   {
     name: 'Storia',
-    href: '#',
+    href: 'storia',
   },
   {
     name: 'Chi siamo',

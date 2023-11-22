@@ -1,10 +1,10 @@
-import {Container} from '@/components/Container'
+import Container from '@/components/Container'
 
 export function Posts() {
     return (
         <section
-            id="faq"
-            aria-labelledby="faq-title"
+            id="blog"
+            aria-labelledby="blog-title"
             className="relative overflow-hidden py-4 sm:py-8"
         >
             <Container className="relative">

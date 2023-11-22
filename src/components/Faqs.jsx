@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { faqs } from '@/data/faq'
-import { Container } from '@/components/Container'
+import Container from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
 
 export function Faqs() {

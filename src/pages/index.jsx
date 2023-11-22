@@ -1,32 +1,22 @@
-import Head from 'next/head'
-
 import {Faqs} from '@/components/Faqs'
-import {Footer} from '@/components/Footer'
 import {Quote} from '@/components/Quote'
 import {Hero} from '@/components/Hero'
 import {Photos} from '@/components/Photos'
 import {Groups} from '@/components/Groups'
 import {Posts} from '@/components/Posts'
+import Layout from "@/components/Layout";
 
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>AlessandriaScout</title>
-                <meta
-                    name="description"
-                    content="Lorem ipsum."
-                />
-            </Head>
-            <main>
+            <Layout>
                 <Hero/>
                 <Photos/>
                 <Quote/>
                 <Groups/>
                 <Faqs/>
                 <Posts/>
-            </main>
-            <Footer/>
+            </Layout>
         </>
     )
 }
