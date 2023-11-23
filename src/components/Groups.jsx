@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import {groups} from '@/data/groups'
 import Container from '@/components/Container'
+import Link from "next/link";
+import {createValidHtmlId} from "@/lib/string";
 
 export function Groups() {
     return (
@@ -12,10 +14,13 @@ export function Groups() {
                 >
                     {groups.map((group) => (
                         <li key={group.name}>
-                            <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={group.imageUrl} alt=""
-                                   width={800} height={1600}/>
-                            <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{group.name}</h3>
-                            <p className="text-base leading-7 text-gray-600">{group.role}</p>
+                            <Link href={`chi-siamo#` + createValidHtmlId(group.name)} >
+                                <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={group.imageUrl}
+                                       alt=""
+                                       width={800} height={1600}/>
+                                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{group.name}</h3>
+                                <p className="text-base leading-7 text-gray-600">{group.place}</p>
+                            </Link>
                             <ul role="list" className="mt-6 flex gap-x-6">
                                 <li>
                                     <a href={group.twitterUrl} className="text-gray-400 hover:text-gray-500">

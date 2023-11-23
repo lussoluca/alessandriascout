@@ -1,11 +1,11 @@
 export const MainMenu = [
   {
     name: 'Storia',
-    href: 'storia',
+    href: '/storia',
   },
   {
     name: 'Chi siamo',
-    href: '#',
+    href: '/chi-siamo',
   },
   {
     name: 'Blog',

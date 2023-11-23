@@ -1,4 +1,4 @@
-export function Logo({className= "h-12 w-12"}) {
+export function Logo({className = "h-12 w-12"}) {
     return (
         <svg version="1.1" id="Layer_1" width="348.011" height="397.608"
              viewBox="0 0 348.011 397.608" overflow="visible" enableBackground="new 0 0 348.011 397.608"

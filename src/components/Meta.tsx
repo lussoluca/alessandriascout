@@ -1,16 +1,16 @@
 import Head from 'next/head'
-import {config} from "@/data/config";
+import {DESCRIPTION} from '@/lib/constants'
 
 const Meta = () => {
-  return (
-    <Head>
-        <title>AlessandriaScout</title>
-        <meta
-            name="description"
-            content={config.description}
-        />
-    </Head>
-  )
+    return (
+        <Head>
+            <title>AlessandriaScout</title>
+            <meta
+                name="description"
+                content={DESCRIPTION}
+            />
+        </Head>
+    )
 }
 
 export default Meta
