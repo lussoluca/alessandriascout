@@ -23,7 +23,7 @@ const TextWithImage = ({ children, image, imagePosition= 'right', title }) => {
                 </div>
             </div>
             <div className={textClass}>
-                <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl" id={createValidHtmlId(title)}>
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl" id={createValidHtmlId(title)}>
                     {title}
                 </h2>
                 <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">

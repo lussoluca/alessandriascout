@@ -4,6 +4,7 @@ import Head from "next/head";
 import {TITLE} from '@/lib/constants'
 import portraitImage from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
 import TextWithImage from "@/components/paragraphs/TextWithImage";
+import Title from "@/components/Title";
 
 const Storia = () => {
     const title = `Storia | ${TITLE}`
@@ -14,8 +15,9 @@ const Storia = () => {
                 <Head>
                     <title>{title}</title>
                 </Head>
-                <Container className="space-y-10 mb-20">
-                    <TextWithImage image={portraitImage} title="I primi anni">
+                <Title title="Storia" subtitle="Storia dello scoutismo alessandrino dalla sua fondazione ad oggi." />
+                <Container className=" space-y-10 mb-20">
+                    <TextWithImage image={portraitImage} title=" I primi anni">
                         <p>
                             Lo scoutismo è stato introdotto in Italia nei primi anni del XX secolo, influenzato dal
                             movimento scout internazionale fondato da Lord Baden-Powell in Inghilterra. Nel 1912, si
@@ -39,7 +41,7 @@ const Storia = () => {
                             testimonianze e approfondimenti sulla loro storia specifica nella comunità alessandrina.
                         </p>
                     </TextWithImage>
-                    <TextWithImage image={portraitImage} imagePosition={'left'} title="L’avventura continua">
+                    <TextWithImage image={portraitImage} imagePosition={'left'} title=" L’avventura continua">
                         <p>
                             I’ve loved making things for as long as I can remember, and
                             wrote my first program when I was 6 years old, just two weeks

@@ -4,6 +4,7 @@ import Head from "next/head";
 import {TITLE} from '@/lib/constants'
 import portraitImage from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
 import TextWithImage from "@/components/paragraphs/TextWithImage";
+import Title from "@/components/Title";
 
 const ChiSiamo = () => {
     const title = `Chi siamo | ${TITLE}`
@@ -14,6 +15,7 @@ const ChiSiamo = () => {
                 <Head>
                     <title>{title}</title>
                 </Head>
+                <Title title="Chi siamo" subtitle="In Alessandria sono presenti 3 gruppi scout, ..." />
                 <Container className="space-y-10 mb-20">
                     <TextWithImage image={portraitImage} imagePosition="left" title="Alessandria 1">
                         <p>

@@ -1,4 +1,5 @@
 import {Logo} from '@/components/Logo'
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -17,7 +18,6 @@ export function Hero() {
             </div>
             <div className="mx-auto max-w-2xl pb-8 sm:pb-8">
                 <div className="text-center">
-                    {/*<div className="flex justify-center mb-6"><Logo className="h-24 w-24"/></div>*/}
                     <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-6xl">
                         AlessandriaScout
                     </h1>
@@ -33,9 +33,9 @@ export function Hero() {
                         >
                             Iscriviti
                         </a>
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                        <Link href={'/chi-siamo'} className="text-sm font-semibold leading-6 text-gray-900">
                             Scopri chi siamo <span aria-hidden="true">→</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
