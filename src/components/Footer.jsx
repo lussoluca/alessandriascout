@@ -1,10 +1,15 @@
-import Link from 'next/link'
+'use client'
 
+import Link from 'next/link'
 import Container from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { MainMenu } from '@/data/MainMenu'
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
 
 export default function Footer() {
+  const pathname = usePathname()
+
   return (
     <footer className="bg-slate-50">
       <Container>
@@ -16,7 +21,10 @@ export default function Footer() {
                 <Link
                   href={item.href}
                   key={item.name}
-                  className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  className={clsx(
+                    'inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900',
+                    pathname === item.href ? 'font-bold' : '',
+                  )}
                 >
                   {item.name}
                 </Link>

@@ -1,12 +1,17 @@
+'use client'
+
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { MainMenu } from '@/data/MainMenu'
 import { Dialog } from '@headlessui/react'
 import { Logo } from '@/components/Logo'
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -30,7 +35,10 @@ const Navigation = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className={clsx(
+                'text-sm leading-6 text-gray-900',
+                pathname === item.href ? 'font-bold' : '',
+              )}
             >
               {item.name}
             </Link>
@@ -74,7 +82,10 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className={clsx(
+                      '-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-gray-900 hover:bg-gray-50',
+                      pathname === item.href ? 'font-bold' : '',
+                    )}
                   >
                     {item.name}
                   </Link>
