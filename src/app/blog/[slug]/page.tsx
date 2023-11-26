@@ -7,6 +7,7 @@ import { Metadata } from 'next'
 import Title from '@/components/Title'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
+import { draftMode } from 'next/headers'
 
 type Params = {
   params: {
@@ -15,7 +16,8 @@ type Params = {
 }
 
 export default async function Post({ params }: Params) {
-  const postData: Promise<any> = getPost(params.slug, false)
+  const { isEnabled } = draftMode()
+  const postData: Promise<any> = getPost(params.slug, isEnabled)
   const { post } = await postData
 
   if (!post) {
@@ -36,7 +38,8 @@ export default async function Post({ params }: Params) {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const postData: Promise<any> = getPost(params.slug, false)
+  const { isEnabled } = draftMode()
+  const postData: Promise<any> = getPost(params.slug, isEnabled)
   const { post } = await postData
   const title: string = `${post.title} | ${TITLE}`
 

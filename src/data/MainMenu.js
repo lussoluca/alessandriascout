@@ -9,7 +9,7 @@ export const MainMenu = [
   },
   {
     name: 'Blog',
-    href: '#',
+    href: '/blog',
   },
   {
     name: 'Contattaci',
