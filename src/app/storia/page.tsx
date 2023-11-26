@@ -1,20 +1,15 @@
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
-import Head from 'next/head'
 import { TITLE } from '@/lib/constants'
 import portraitImage from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
 import TextWithImage from '@/components/paragraphs/TextWithImage'
 import Title from '@/components/Title'
+import { Metadata } from 'next'
 
-const Page = () => {
-  const title = `Storia | ${TITLE}`
-
+export default function Page() {
   return (
     <>
       <Layout>
-        <Head>
-          <title>{title}</title>
-        </Head>
         <Title
           title="Storia"
           subtitle="Storia dello scoutismo alessandrino dalla sua fondazione ad oggi."
@@ -86,4 +81,6 @@ const Page = () => {
   )
 }
 
-export default Page
+export const metadata: Metadata = {
+  title: `Storia | ${TITLE}`,
+}

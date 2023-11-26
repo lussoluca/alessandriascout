@@ -13,6 +13,8 @@
     "defaults, not ie <= 11"
   ],
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.1",
+    "@contentful/rich-text-types": "^16.2.1",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/forms": "^0.5.7",
@@ -38,6 +40,7 @@
     "eslint-config-next": "^14.0.3",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "sharp": "^0.32.6"
+    "sharp": "^0.32.6",
+    "typescript": "^5.3.2"
   }
 }

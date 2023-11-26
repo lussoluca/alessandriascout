@@ -18,20 +18,18 @@ const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
             src={image}
             alt=""
             sizes="(min-width: 1024px) 32rem, 20rem"
-            className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+            className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
           />
         </div>
       </div>
       <div className={textClass}>
         <h2
-          className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl"
+          className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl"
           id={createValidHtmlId(title)}
         >
           {title}
         </h2>
-        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-          {children}
-        </div>
+        <div className="mt-6 space-y-7 text-base text-zinc-600">{children}</div>
       </div>
     </div>
   )

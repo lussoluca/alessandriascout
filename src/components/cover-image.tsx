@@ -1,29 +1,33 @@
-import clsx from 'clsx'
+import ContentfulImage from '@/lib/contentful-image'
 import Link from 'next/link'
-import Image from 'next/image'
+import clsx from 'clsx'
 
-type Props = {
+export default function CoverImage({
+  title,
+  url,
+  slug,
+}: {
   title: string
-  src: string
+  url: string
   slug?: string
-}
-
-const CoverImage = ({ title, src, slug }: Props) => {
+}) {
   const image = (
-    <Image
-      src={src}
+    <ContentfulImage
       alt={`Cover Image for ${title}`}
-      className={clsx('w-full shadow-sm', {
-        'transition-shadow duration-200 hover:shadow-lg': slug,
+      priority
+      width={200}
+      height={100}
+      className={clsx('shadow-small', {
+        'hover:shadow-medium transition-shadow duration-200': slug,
       })}
-      width={1300}
-      height={630}
+      src={url}
     />
   )
+
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
+        <Link href={`/posts/${slug}`} aria-label={title}>
           {image}
         </Link>
       ) : (
@@ -32,5 +36,3 @@ const CoverImage = ({ title, src, slug }: Props) => {
     </div>
   )
 }
-
-export default CoverImage

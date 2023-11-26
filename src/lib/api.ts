@@ -1,47 +1,109 @@
-import fs from 'fs'
-import { join } from 'path'
-import matter from 'gray-matter'
+import Post from '@/interfaces/post'
 
-const postsDirectory = join(process.cwd(), '_posts')
-
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory)
-}
-
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
-
-  type Items = {
-    [key: string]: string
+const POST_GRAPHQL_FIELDS = `
+  slug
+  title
+  coverImage {
+    url
   }
-
-  const items: Items = {}
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug
+  date
+  author {
+    name
+    picture {
+      url
     }
-    if (field === 'content') {
-      items[field] = content
+  }
+  excerpt
+  content {
+    json
+    links {
+      assets {
+        block {
+          sys {
+            id
+          }
+          url
+          description
+        }
+      }
     }
+  }
+`
 
-    if (typeof data[field] !== 'undefined') {
-      items[field] = data[field]
-    }
-  })
-
-  return items
+async function fetchGraphQL(query: string, preview = false): Promise<any> {
+  return fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${
+          preview
+            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+            : process.env.CONTENTFUL_ACCESS_TOKEN
+        }`,
+      },
+      body: JSON.stringify({ query }),
+      next: { tags: ['posts'] },
+    },
+  ).then((response) => response.json())
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs()
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  return posts
+function extractPost(fetchResponse: any): Post {
+  return fetchResponse?.data?.postCollection?.items?.[0]
+}
+
+function extractPostEntries(fetchResponse: any): Post[] {
+  return fetchResponse?.data?.postCollection?.items
+}
+
+export async function getPreviewPostBySlug(slug: string | null): Promise<any> {
+  const entry = await fetchGraphQL(
+    `query {
+      postCollection(where: { slug: "${slug}" }, preview: true, limit: 1) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    true,
+  )
+
+  return extractPost(entry)
+}
+
+export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
+  const entries = await fetchGraphQL(
+    `query {
+      postCollection(where: { slug_exists: true }, order: date_DESC, preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    isDraftMode,
+  )
+
+  return extractPostEntries(entries)
+}
+
+export async function getPost(slug: string, preview: boolean): Promise<any> {
+  const entry = await fetchGraphQL(
+    `query {
+      postCollection(where: { slug: "${slug}" }, preview: ${
+        preview ? 'true' : 'false'
+      }, limit: 1) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    preview,
+  )
+
+  return {
+    post: extractPost(entry),
+  }
 }
