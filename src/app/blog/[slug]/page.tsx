@@ -1,7 +1,7 @@
 import { getAllPosts, getPost } from '@/lib/api'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
-import { Markdown } from '@/lib/markdown'
+import { Markdown } from '@/components/markdown'
 import CoverImage from '@/components/cover-image'
 import { Metadata } from 'next'
 import Title from '@/components/Title'

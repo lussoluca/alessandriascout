@@ -89,6 +89,26 @@ export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
   return extractPostEntries(entries)
 }
 
+export async function getLatestPosts(
+  isDraftMode: boolean,
+  limit: number,
+): Promise<any[]> {
+  const entries = await fetchGraphQL(
+    `query {
+      postCollection(where: { slug_exists: true }, order: date_DESC, limit: ${limit}, preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    isDraftMode,
+  )
+
+  return extractPostEntries(entries)
+}
+
 export async function getPost(slug: string, preview: boolean): Promise<any> {
   const entry = await fetchGraphQL(
     `query {
