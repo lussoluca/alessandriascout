@@ -12,16 +12,16 @@ export default function Page() {
       <Layout>
         <Title
           title="Storia"
-          subtitle="Storia dello scoutismo alessandrino dalla sua fondazione ad oggi."
+          subtitle="Storia dello scautismo alessandrino dalla sua fondazione ad oggi."
         />
         <Container className="mb-20 space-y-10">
           <TextWithImage image={portraitImage} title=" I primi anni">
             <p>
-              Lo scoutismo è stato introdotto in Italia nei primi anni del XX
+              Lo scautismo è stato introdotto in Italia nei primi anni del XX
               secolo, influenzato dal movimento scout internazionale fondato da
               Lord Baden-Powell in Inghilterra. Nel 1912, si tenne il primo
               campo scout italiano a Bologna, segnando l’inizio ufficiale dello
-              scoutismo nel paese. Il movimento scout italiano crebbe
+              scautismo nel paese. Il movimento scout italiano crebbe
               rapidamente, attraendo giovani da diverse regioni.
             </p>
             <p>
@@ -32,11 +32,11 @@ export default function Page() {
               comunità, avranno contribuito a plasmare la vita di molti giovani
               alessandrini. Eventi significativi, come campi, escursioni e
               iniziative di servizio, avranno giocato un ruolo importante
-              nell’integrare lo scoutismo nella storia locale.
+              nell’integrare lo scautismo nella storia locale.
             </p>
             <p>
               Per ottenere informazioni più dettagliate sulla storia dello
-              scoutismo ad Alessandria, ti consiglio di consultare archivi
+              scautismo ad Alessandria, ti consiglio di consultare archivi
               locali, associazioni scout della zona o documenti storici della
               città. Potresti anche contattare direttamente gruppi scout locali
               per raccogliere testimonianze e approfondimenti sulla loro storia

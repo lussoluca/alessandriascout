@@ -27,7 +27,7 @@ export const groups = [
   },
   {
     name: 'Masci',
-    place: 'Santa Maria di Castello',
+    place: 'Piazza Santo Stefano',
     imageUrl: masci,
     twitterUrl: '#',
     linkedinUrl: '#',
