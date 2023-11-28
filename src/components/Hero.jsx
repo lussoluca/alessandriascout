@@ -1,4 +1,3 @@
-import { Logo } from '@/components/Logo'
 import Link from 'next/link'
 
 export function Hero() {
@@ -22,7 +21,7 @@ export function Hero() {
             AlessandriaScout
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Benvenuta/o sul sito dello scautismo alessandrino, promosso dai
+            Benvenuti sul sito dello scautismo alessandrino, promosso dai
             Gruppi AGESCI cittadini (AL1, AL2, AL3), dalla Comunità del
             Movimento Adulti Scout Cattolici Italiani (MASCI) e dagli Amici
             degli Scout di Alessandria.
