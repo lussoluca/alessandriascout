@@ -16,7 +16,7 @@ const Navigation = () => {
   return (
     <header className="absolute top-0 z-10 w-full">
       <nav
-        className="container relative mx-auto flex flex-wrap items-center justify-between py-8 px-6 lg:px-8"
+        className="container relative mx-auto flex flex-wrap items-center justify-between px-6 py-8 lg:px-8"
         aria-label="Global"
       >
         <div className="ml-auto lg:hidden">

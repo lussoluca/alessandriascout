@@ -2,6 +2,7 @@ import '@/styles/tailwind.css'
 import { Metadata } from 'next'
 import { TITLE, DESCRIPTION } from '@/lib/constants'
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body>{children}</body>
+      <Analytics />
     </html>
   )
 }

@@ -21,10 +21,10 @@ export function Hero() {
             AlessandriaScout
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Benvenuti sul sito dello scautismo alessandrino, promosso dai
-            Gruppi AGESCI cittadini (AL1, AL2, AL3), dalla Comunità del
-            Movimento Adulti Scout Cattolici Italiani (MASCI) e dagli Amici
-            degli Scout di Alessandria.
+            Benvenuti sul sito dello scautismo alessandrino, promosso dai Gruppi
+            AGESCI cittadini (AL1, AL2, AL3), dalla Comunità del Movimento
+            Adulti Scout Cattolici Italiani (MASCI) e dagli Amici degli Scout di
+            Alessandria.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
