@@ -14,7 +14,7 @@ export default function Page() {
           title="Storia"
           subtitle="Storia dello scoutismo alessandrino dalla sua fondazione ad oggi."
         />
-        <Container className=" mb-20 space-y-10">
+        <Container className="mb-20 space-y-10">
           <TextWithImage image={portraitImage} title=" I primi anni">
             <p>
               Lo scoutismo è stato introdotto in Italia nei primi anni del XX

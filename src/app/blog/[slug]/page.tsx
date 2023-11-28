@@ -27,7 +27,7 @@ export default async function Post({ params }: Params) {
   return (
     <>
       <Layout>
-        <Title title={post.title} subtitle={post.excerpt} />
+        <Title title={post.title} subtitle="" />
         <Container className="mb-20 space-y-10">
           <CoverImage title={post.title} url={post.coverImage.url} />
           <Markdown content={post.content} />

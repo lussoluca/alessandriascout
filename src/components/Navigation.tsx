@@ -14,13 +14,12 @@ const Navigation = () => {
   const pathname = usePathname()
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute top-0 z-10 w-full">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="container relative mx-auto flex flex-wrap items-center justify-between py-8 px-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1"></div>
-        <div className="flex lg:hidden">
+        <div className="ml-auto lg:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -30,6 +29,10 @@ const Navigation = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
+        <Link href={'/'} className="hidden lg:block">
+          <Logo className="h-12 w-12" />
+        </Link>
         <div className="hidden lg:flex lg:gap-x-12">
           {MainMenu.map((item) => (
             <Link
@@ -44,15 +47,9 @@ const Navigation = () => {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
-      <div className="hidden lg:block">
-        <div className="mb-6 flex justify-center">
-          <Link href={'/'}>
-            <Logo className="h-24 w-24" />
-          </Link>
-        </div>
-      </div>
+
+      {/*Mobile version*/}
       <Dialog
         as="div"
         className="lg:hidden"
