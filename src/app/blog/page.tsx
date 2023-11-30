@@ -3,32 +3,38 @@ import { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
 import { TITLE } from '@/lib/constants'
-import { getAllPosts } from '@/lib/api'
+import { getPagedPosts, getPostsCount } from '@/lib/api'
+import Pagination from '@/components/pagination'
+import Post from '@/components/Post'
 import { draftMode } from 'next/headers'
-import DateFormatter from '@/components/date-formatter'
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    page?: string
+  }
+}) {
+  const currentPage = Number(searchParams?.page) || 1
+  const totalPages = await getPostsCount()
   const { isEnabled } = draftMode()
-  const postsData = await getAllPosts(isEnabled)
+  const postsData = await getPagedPosts(currentPage, isEnabled)
 
   return (
     <>
       <Layout>
         <Title title="Blog" subtitle="Ultime notizie da..." />
-        <Container className=" mb-20 space-y-10">
-          {postsData.map((post) => (
-            <div key={post.slug}>
-              <h3 className="mb-3 text-3xl leading-snug">
-                <a href={`/blog/${post.slug}`} className="hover:underline">
-                  {post.title}
-                </a>
-              </h3>
-              <div className="mb-4 text-lg">
-                <DateFormatter dateString={post.date} />
+        <Container className="">
+          <div className="xl:relative">
+            <div className="mx-auto max-w-2xl space-y-10">
+              {postsData.map((post) => (
+                <Post key={post.slug} {...post} />
+              ))}
+              <div className="mt-10 flex justify-center">
+                <Pagination totalPages={totalPages} />
               </div>
-              <p className="mb-4 text-lg leading-relaxed">{post.excerpt}</p>
             </div>
-          ))}
+          </div>
         </Container>
       </Layout>
     </>

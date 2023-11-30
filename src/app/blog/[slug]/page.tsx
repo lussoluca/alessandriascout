@@ -2,12 +2,11 @@ import { getAllPosts, getPost } from '@/lib/api'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
 import { Markdown } from '@/components/markdown'
-import CoverImage from '@/components/cover-image'
 import { Metadata } from 'next'
-import Title from '@/components/Title'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
 import { draftMode } from 'next/headers'
+import ArticleLayout from '@/components/ArticleLayout'
 
 type Params = {
   params: {
@@ -27,10 +26,10 @@ export default async function Post({ params }: Params) {
   return (
     <>
       <Layout>
-        <Title title={post.title} subtitle="" />
         <Container className="mb-20 space-y-10">
-          <CoverImage title={post.title} url={post.coverImage.url} />
-          <Markdown content={post.content} />
+          <ArticleLayout meta={post}>
+            <Markdown content={post.content} />
+          </ArticleLayout>
         </Container>
       </Layout>
     </>

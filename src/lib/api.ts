@@ -1,5 +1,7 @@
 import Post from '@/interfaces/post'
 
+const ITEMS_PER_PAGE = 6
+
 const POST_GRAPHQL_FIELDS = `
   slug
   title
@@ -26,6 +28,12 @@ const POST_GRAPHQL_FIELDS = `
           description
         }
       }
+    }
+  }
+  contentfulMetadata {
+    tags {
+        id
+        name
     }
   }
 `
@@ -72,6 +80,27 @@ export async function getPreviewPostBySlug(slug: string | null): Promise<any> {
   return extractPost(entry)
 }
 
+export async function getPagedPosts(
+  currentPage: number,
+  isDraftMode: boolean,
+): Promise<any[]> {
+  const offset = (currentPage - 1) * ITEMS_PER_PAGE
+  const entries = await fetchGraphQL(
+    `query {
+      postCollection(skip:${offset}, limit:${ITEMS_PER_PAGE}, where: { slug_exists: true }, order: date_DESC, preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    isDraftMode,
+  )
+
+  return extractPostEntries(entries)
+}
+
 export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
   const entries = await fetchGraphQL(
     `query {
@@ -87,6 +116,19 @@ export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
   )
 
   return extractPostEntries(entries)
+}
+
+export async function getPostsCount(): Promise<number> {
+  const count = await fetchGraphQL(
+    `query {
+      postCollection(where: { slug_exists: true }, order: date_DESC, preview: false) {
+        total
+      }
+    }`,
+    false,
+  )
+
+  return Math.ceil(Number(count?.data?.postCollection?.total) / ITEMS_PER_PAGE)
 }
 
 export async function getLatestPosts(

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pretty": "prettier --write ."
+    "pretty": "prettier --write .",
+    "revalidate-local": "curl -X POST -H 'x-vercel-reval-key: pluto' http://localhost:3000/blog/revalidate"
   },
   "browserslist": [
     "defaults, not ie <= 11"
