@@ -3,7 +3,7 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { MainMenu } from '@/data/MainMenu'
 import { Dialog } from '@headlessui/react'
-import { Logo } from '@/components/Logo'
+import Logo from '@/components/Logo'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

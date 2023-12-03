@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export function Hero() {
+export default function Hero() {
   return (
     <div className="relative isolate px-6 lg:px-14">
       <div

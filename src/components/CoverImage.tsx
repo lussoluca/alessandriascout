@@ -1,4 +1,4 @@
-import ContentfulImage from '@/components/contentful-image'
+import ContentfulImage from '@/components/ContentfulImage'
 import Link from 'next/link'
 import clsx from 'clsx'
 

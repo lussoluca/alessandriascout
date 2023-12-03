@@ -4,7 +4,7 @@ import Layout from '@/components/Layout'
 import Container from '@/components/Container'
 import { TITLE } from '@/lib/constants'
 import { getPagedPosts, getPostsCount } from '@/lib/api'
-import Pagination from '@/components/pagination'
+import Pagination from '@/components/Pagination'
 import Post from '@/components/Post'
 import { draftMode } from 'next/headers'
 

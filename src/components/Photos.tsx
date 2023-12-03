@@ -7,7 +7,7 @@ import image3 from '@/images/photos/istockphoto-1485544927-1024x1024.jpg'
 import image4 from '@/images/photos/istockphoto-1089394888-1024x1024.jpg'
 import image5 from '@/images/photos/istockphoto-1173582449-1024x1024.jpg'
 
-export function Photos() {
+export default function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (

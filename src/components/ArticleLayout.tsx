@@ -1,6 +1,6 @@
-import { Prose } from '@/components/Prose'
-import DateFormatter from '@/components/date-formatter'
-import CoverImage from '@/components/cover-image'
+import Prose from '@/components/Prose'
+import DateFormatter from '@/components/DateFormatter'
+import CoverImage from '@/components/CoverImage'
 
 export default function ArticleLayout({ children, meta }) {
   return (

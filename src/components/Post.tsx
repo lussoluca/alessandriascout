@@ -1,4 +1,4 @@
-import DateFormatter from '@/components/date-formatter'
+import DateFormatter from '@/components/DateFormatter'
 import PostType from '@/interfaces/post'
 
 export default async function Post(post: PostType) {

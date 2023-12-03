@@ -1,4 +1,4 @@
-export function Logo({ className = 'h-12 w-12' }) {
+export default function Logo({ className = 'h-12 w-12' }) {
   return (
     <svg
       version="1.1"

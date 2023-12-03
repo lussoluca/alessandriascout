@@ -1,7 +1,7 @@
 import { getAllPosts, getPost } from '@/lib/api'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
-import { Markdown } from '@/components/markdown'
+import { Markdown } from '@/components/Markdown'
 import { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'

@@ -4,7 +4,7 @@ import Container from '@/components/Container'
 import Link from 'next/link'
 import { createValidHtmlId } from '@/lib/string'
 
-export function Groups() {
+export default function Groups() {
   return (
     <div className="mb-10 bg-white">
       <Container className="">
