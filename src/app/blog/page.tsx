@@ -26,7 +26,7 @@ export default async function Page({
         <Title title="Blog" subtitle="Ultime notizie da..." />
         <Container className="">
           <div className="xl:relative">
-            <div className="mx-auto max-w-2xl space-y-10">
+            <div className="mx-auto space-y-10">
               {postsData.map((post) => (
                 <Post key={post.slug} {...post} />
               ))}

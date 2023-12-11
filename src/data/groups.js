@@ -1,4 +1,4 @@
-import masci from '@/images/groups/masci.png'
+import masci from '@/images/groups/masci_home.png'
 
 export const groups = [
   {

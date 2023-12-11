@@ -11,10 +11,10 @@ export default function Footer() {
   const pathname = usePathname()
 
   return (
-    <footer className="bg-slate-50">
+    <footer className="mt-auto bg-slate-50">
       <Container className="">
         <div className="py-16">
-          <Logo className="mx-auto h-10 w-auto" />
+          <Logo className="h-10 w-10" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
               {MainMenu.map((item) => (
