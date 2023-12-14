@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import image1 from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
+import image1 from '@/images/photos/7369149_27163035_2022.02.20.5x1000.agesci.lc.villa.pamphili_roma_7173.jpg'
 import image2 from '@/images/photos/istockphoto-1173584509-1024x1024.jpg'
-import image3 from '@/images/photos/istockphoto-1485544927-1024x1024.jpg'
+import image3 from '@/images/photos/IMG_0017.jpeg'
 import image4 from '@/images/photos/istockphoto-1089394888-1024x1024.jpg'
-import image5 from '@/images/photos/istockphoto-1173582449-1024x1024.jpg'
+import image5 from '@/images/photos/DSC_0217.jpeg'
 
 export default function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']

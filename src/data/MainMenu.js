@@ -13,6 +13,6 @@ export const MainMenu = [
   },
   {
     name: 'Contattaci',
-    href: '#',
+    href: '/contattaci',
   },
 ]
