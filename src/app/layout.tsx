@@ -11,8 +11,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className="flex min-h-screen flex-col">{children}</body>
-      <SpeedInsights />
+      <body className="flex min-h-screen flex-col">
+          {children}
+          <SpeedInsights />
+      </body>
     </html>
   )
 }

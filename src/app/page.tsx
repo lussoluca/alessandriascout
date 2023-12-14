@@ -13,9 +13,9 @@ export default function Home() {
         <Hero />
         <Photos />
         <Quote />
-        <Groups />
+        {/*<Groups />*/}
         <Faqs />
-        <Posts />
+        {/*<Posts />*/}
       </Layout>
     </>
   )

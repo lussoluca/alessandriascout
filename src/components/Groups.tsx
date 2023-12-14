@@ -32,7 +32,7 @@ export default function Groups() {
               <ul role="list" className="mt-6 flex gap-x-6">
                 <li>
                   <a
-                    href={group.twitterUrl}
+                    href={group.facebookUrl}
                     className="text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">Twitter</span>
@@ -48,7 +48,7 @@ export default function Groups() {
                 </li>
                 <li>
                   <a
-                    href={group.linkedinUrl}
+                    href={group.instagramUrl}
                     className="text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">LinkedIn</span>
