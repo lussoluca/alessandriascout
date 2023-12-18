@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { TITLE, DESCRIPTION } from '@/lib/constants'
 import React from 'react'
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/dist/google';
 
 export default function RootLayout({
   children,
