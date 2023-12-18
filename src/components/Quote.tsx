@@ -18,7 +18,7 @@ export default function Quote() {
           <figcaption className="m-5">
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
               <div className="font-semibold text-gray-900">
-                Robert Baden-Powel
+                Robert Baden-Powell
               </div>
               <svg
                 viewBox="0 0 2 2"
