@@ -1,4 +1,4 @@
-import masci from '@/images/groups/masci.png'
+import masci from '@/images/groups/masci_home.png'
 import Image from 'next/image'
 
 export default function Logo({ className = 'h-12 w-12' }) {

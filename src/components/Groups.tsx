@@ -16,11 +16,11 @@ export default function Groups() {
             <li key={group.name}>
               <Link href={`chi-siamo#` + createValidHtmlId(group.name)}>
                 <Image
-                  className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  className="w-full object-cover"
                   src={group.imageUrl}
-                  alt=""
-                  width={800}
-                  height={1600}
+                  alt={group.name}
+                  width={280}
+                  height={280}
                 />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
                   {group.name}
