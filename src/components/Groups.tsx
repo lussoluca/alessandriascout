@@ -6,7 +6,7 @@ import { createValidHtmlId } from '@/lib/string'
 
 export default function Groups() {
   return (
-    <div className="mb-10 bg-white">
+    <div className="mb-10">
       <Container className="">
         <ul
           role="list"
