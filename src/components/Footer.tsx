@@ -11,7 +11,7 @@ export default function Footer() {
   const pathname = usePathname()
 
   return (
-    <footer className="mt-auto bg-slate-50">
+    <footer className="mt-auto">
       <Container className="">
         <div className="py-16">
           <Logo className="h-10 w-10" />
