@@ -12,7 +12,7 @@ export default async function Posts() {
     <section
       id="blog"
       aria-labelledby="blog-title"
-      className="relative overflow-hidden mt-16 px-6 lg:px-8"
+      className="relative mt-16 overflow-hidden px-6 lg:px-8"
     >
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:mx-0">

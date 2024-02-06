@@ -7,12 +7,12 @@ export const faqs = [
     },
     {
       question: 'Che attività si fanno?',
-      answer: 'Dipende dalla fascia d’età. Tra gli 8 e i 12 anni è predominante il gioco. Tra i 12 e i 16 anni, l’avventura. Dai 16 ai 20 si passa al servizio.',
+      answer:
+        'Dipende dalla fascia d’età. Tra gli 8 e i 12 anni è predominante il gioco. Tra i 12 e i 16 anni, l’avventura. Dai 16 ai 20 si passa al servizio.',
     },
     {
       question: 'Come ci si iscrive?',
-      answer:
-        'Contattando uno dei tre gruppi presenti in città.',
+      answer: 'Contattando uno dei tre gruppi presenti in città.',
     },
   ],
   [

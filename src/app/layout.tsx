@@ -2,8 +2,8 @@ import '@/styles/tailwind.css'
 import { Metadata } from 'next'
 import { TITLE, DESCRIPTION } from '@/lib/constants'
 import React from 'react'
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function RootLayout({
   children,
@@ -13,9 +13,9 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className="flex min-h-screen flex-col">
-          {children}
-          <SpeedInsights />
-          <GoogleTagManager gtmId="GTM-NPNQNLS5" />
+        {children}
+        <SpeedInsights />
+        <GoogleTagManager gtmId="GTM-NPNQNLS5" />
       </body>
     </html>
   )

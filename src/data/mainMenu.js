@@ -1,8 +1,8 @@
-export const MainMenu = [
-  {
-    name: 'Storia',
-    href: '/storia',
-  },
+export const mainMenu = [
+  // {
+  //   name: 'Storia',
+  //   href: '/storia',
+  // },
   {
     name: 'Chi siamo',
     href: '/chi-siamo',

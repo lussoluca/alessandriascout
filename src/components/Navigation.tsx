@@ -1,7 +1,7 @@
 'use client'
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { MainMenu } from '@/data/MainMenu'
+import { mainMenu } from '@/data/mainMenu'
 import { Dialog } from '@headlessui/react'
 import Logo from '@/components/Logo'
 import { useState } from 'react'
@@ -34,7 +34,7 @@ const Navigation = () => {
           <Logo className="h-12 w-12" />
         </Link>
         <div className="hidden lg:flex lg:gap-x-12">
-          {MainMenu.map((item) => (
+          {mainMenu.map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -75,7 +75,7 @@ const Navigation = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {MainMenu.map((item) => (
+                {mainMenu.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Container from '@/components/Container'
 import Logo from '@/components/Logo'
-import { MainMenu } from '@/data/MainMenu'
+import { mainMenu } from '@/data/mainMenu'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
@@ -17,7 +17,7 @@ export default function Footer() {
           <Logo className="h-10 w-10" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              {MainMenu.map((item) => (
+              {mainMenu.map((item) => (
                 <Link
                   href={item.href}
                   key={item.name}
@@ -37,7 +37,7 @@ export default function Footer() {
             <Link
               href="https://github.com/lussoluca/alessandriascout"
               className="group"
-              aria-label="TaxPal on GitHub"
+              aria-label="AlessandriaScout su GitHub"
             >
               <svg
                 aria-hidden="true"

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { createValidHtmlId } from '@/lib/string'
+import MarkdownLocal from '@/components/MarkdownLocal'
 
 const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
   let imageClass = 'lg:pl-20'
@@ -18,7 +19,7 @@ const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
             src={image}
             alt=""
             sizes="(min-width: 1024px) 32rem, 20rem"
-            className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
+            className="aspect-square object-cover"
           />
         </div>
       </div>
@@ -29,7 +30,9 @@ const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
         >
           {title}
         </h2>
-        <div className="mt-6 space-y-7 text-base text-zinc-600">{children}</div>
+        <div className="prose prose-zinc mt-6 space-y-7 prose-a:text-indigo-500">
+          <MarkdownLocal content={children} />
+        </div>
       </div>
     </div>
   )
