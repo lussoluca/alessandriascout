@@ -39,7 +39,7 @@ export default function Faqs() {
                     <h3 className="font-display text-lg leading-7 text-slate-900">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <p className="mt-4 text-sm text-slate-700" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
                   </li>
                 ))}
               </ul>

@@ -5,8 +5,10 @@ import Link from 'next/link'
 import { createValidHtmlId } from '@/lib/string'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons'
+import { faSurprise } from '@fortawesome/free-regular-svg-icons'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-function getSocialIcon(type: string) {
+function getSocialIcon(type: string): IconProp {
   switch (type) {
     case 'facebook':
       return faFacebook
@@ -15,6 +17,8 @@ function getSocialIcon(type: string) {
     case 'tiktok':
       return faTiktok
   }
+
+  return faSurprise
 }
 
 export default function Groups() {
