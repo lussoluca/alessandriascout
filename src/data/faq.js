@@ -12,7 +12,7 @@ export const faqs = [
     },
     {
       question: 'Come ci si iscrive?',
-      answer: 'Contattando uno dei tre gruppi presenti in città.',
+      answer: 'Cerca il pulsante viola in cima a questa pagina.',
     },
   ],
   [
@@ -29,7 +29,7 @@ export const faqs = [
     {
       question: 'Quanto costa partecipare?',
       answer:
-        'Dipende dalla fascia di età e dal gruppo. Quello che chiediamo è una quota associativa annuale e l’attrezzatura necessaria (uniforme, zaino, sacco a pelo, ecc.).',
+        'Dipende dalla fascia di età e dal gruppo. Quello che chiediamo è una quota associativa annuale (per l’assicurazione) e l’attrezzatura necessaria (uniforme, zaino, sacco a pelo, ecc.).',
     },
   ],
   [
