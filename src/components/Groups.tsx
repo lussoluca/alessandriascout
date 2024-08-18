@@ -4,7 +4,18 @@ import Container from '@/components/Container'
 import Link from 'next/link'
 import { createValidHtmlId } from '@/lib/string'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons'
+
+function getSocialIcon(type: string) {
+  switch (type) {
+    case 'facebook':
+      return faFacebook
+    case 'instagram':
+      return faInstagram
+    case 'tiktok':
+      return faTiktok
+  }
+}
 
 export default function Groups() {
   return (
@@ -38,9 +49,7 @@ export default function Groups() {
                       <span className="sr-only">{social.name}</span>
                       <FontAwesomeIcon
                         className="h-5 w-5"
-                        icon={
-                          social.type == 'facebook' ? faFacebook : faInstagram
-                        }
+                        icon={getSocialIcon(social.type)}
                       />
                     </a>
                   </li>

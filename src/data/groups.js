@@ -61,6 +61,11 @@ Nel 1997 la sede viene spostata dall’Istituto Don Orione alla Cattedrale diven
         type: 'instagram',
         name: 'Instagram',
         url: 'https://www.instagram.com/grupposcoutal3/',
+      },
+      {
+        type: 'tiktok',
+        name: 'TikTok',
+        url: 'https://www.tiktok.com/@grupposcouta|3',
       }
     ],
     description: `
