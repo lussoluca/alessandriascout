@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
 import { TITLE } from '@/lib/constants'
-import portraitImage from '@/images/photos/istockphoto-916072438-1024x1024.jpg'
 import TextWithImage from '@/components/paragraphs/TextWithImage'
 import Title from '@/components/Title'
 import { Metadata } from 'next'
@@ -13,7 +12,7 @@ export default function Page() {
       <Layout>
         <Title
           title="Chi siamo"
-          subtitle="In Alessandria sono presenti 3 gruppi scout, ..."
+          // subtitle="In Alessandria sono presenti 3 gruppi scout, ..."
         />
         <Container className="mb-20 space-y-10">
           {groups.map((group) => (

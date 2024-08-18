@@ -27,12 +27,13 @@ export default function Hero() {
             Alessandria.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
+            <Link
+              href={'https://forms.gle/HpGs4c9kyUjc2Yar8'}
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              target={'_blank'}
             >
-              Iscriviti
-            </a>
+              Iscrizione
+            </Link>
             <Link
               href={'/chi-siamo'}
               className="text-sm font-semibold leading-6 text-gray-900"

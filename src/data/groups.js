@@ -12,12 +12,12 @@ export const groups = [
       {
         type: 'instagram',
         name: 'Instagram',
-        url: '#',
+        url: 'https://www.instagram.com/grupposcoutagesci_al1/',
       },
       {
         type: 'facebook',
         name: 'Facebook',
-        url: '#',
+        url: 'https://www.facebook.com/AGESCIAl1Piedmont',
       },
     ],
     description: `
@@ -43,32 +43,13 @@ Branche.
       {
         type: 'instagram',
         name: 'Instagram',
-        url: '#',
+        url: 'https://www.instagram.com/gruppo_scout_alessandria2/',
       },
     ],
     description: `
-Lo scautismo è stato introdotto in Italia nei primi anni del XX
-secolo, influenzato dal movimento scout internazionale fondato da
-Lord Baden-Powell in Inghilterra. Nel 1912, si tenne il primo
-campo scout italiano a Bologna, segnando l’inizio ufficiale dello
-scautismo nel paese. Il movimento scout italiano crebbe
-rapidamente, attraendo giovani da diverse regioni.
-
-Nel contesto di Alessandria, è probabile che il movimento scout
-abbia radici profonde nella comunità locale, con gruppi scout che
-si sono sviluppati nel corso degli anni. Le attività scout,
-incentrate sull’educazione, l’avventura e il servizio alla
-comunità, avranno contribuito a plasmare la vita di molti giovani
-alessandrini. Eventi significativi, come campi, escursioni e
-iniziative di servizio, avranno giocato un ruolo importante
-nell’integrare lo scautismo nella storia locale.
-
-Per ottenere informazioni più dettagliate sulla storia dello
-scautismo ad Alessandria, ti consiglio di consultare archivi
-locali, associazioni scout della zona o documenti storici della
-città. Potresti anche contattare direttamente gruppi scout locali
-per raccogliere testimonianze e approfondimenti sulla loro storia
-specifica nella comunità alessandrina.
+L’Alessandria 2 è uno dei tre gruppi scout presenti nel territorio alessandrino, ha la propria sede presso i locali adiacenti la Cattedrale della città. Il suo fazzolettone, per metà bianco e per l’altra metà rosso, rappresenta i colori della città di Alessandria.
+Il gruppo nasce nel 1977 quando alcuni membri dell’allora unica realtà associativa esistente, l’Alessandria 1, decidono di sviluppare la presenza degli scouts nel territorio con coraggio e tanta voglia di fare danno vita ad un nuovo gruppo che trova ospitalità per circa 20 anni presso l’Istituto Don Orione.
+Nel 1997 la sede viene spostata dall’Istituto Don Orione alla Cattedrale divenendo una forte realtà nella vita della parrocchia anche grazie all’accoglienza ed all’ospitalità ricevuta prima da Don Mario Gonella e poi da Don Gianni Torriggia, attuale parroco della Cattedrale, che segue il gruppo nelle sue iniziative. Negli anni si sono succeduti diverse figure che hanno seguito il cammino di catechesi sia della Comunità Capi che delle singole Branche.
     `,
   },
   {
@@ -77,34 +58,17 @@ specifica nella comunità alessandrina.
     imageUrl: alessandria_3,
     socials: [
       {
-        type: 'facebook',
-        name: 'Facebook',
-        url: '#',
-      },
+        type: 'instagram',
+        name: 'Instagram',
+        url: 'https://www.instagram.com/grupposcoutal3/',
+      }
     ],
     description: `
-Lo scautismo è stato introdotto in Italia nei primi anni del XX
-secolo, influenzato dal movimento scout internazionale fondato da
-Lord Baden-Powell in Inghilterra. Nel 1912, si tenne il primo
-campo scout italiano a Bologna, segnando l’inizio ufficiale dello
-scautismo nel paese. Il movimento scout italiano crebbe
-rapidamente, attraendo giovani da diverse regioni.
-
-Nel contesto di Alessandria, è probabile che il movimento scout
-abbia radici profonde nella comunità locale, con gruppi scout che
-si sono sviluppati nel corso degli anni. Le attività scout,
-incentrate sull’educazione, l’avventura e il servizio alla
-comunità, avranno contribuito a plasmare la vita di molti giovani
-alessandrini. Eventi significativi, come campi, escursioni e
-iniziative di servizio, avranno giocato un ruolo importante
-nell’integrare lo scautismo nella storia locale.
-
-Per ottenere informazioni più dettagliate sulla storia dello
-scautismo ad Alessandria, ti consiglio di consultare archivi
-locali, associazioni scout della zona o documenti storici della
-città. Potresti anche contattare direttamente gruppi scout locali
-per raccogliere testimonianze e approfondimenti sulla loro storia
-specifica nella comunità alessandrina.
+Sono passati 25 anni da quel 13 dicembre 1996 quando il fazzolettone del nostro gruppo fu indossato per la prima volta.
+Era il giorno di Santa Lucia, data tanto importante per lo scautismo alessandrino quanto lo è diventata per noi negli anni a venire. Ci fu una cerimonia, il rinnovo della Promessa Scout e la consegna del nuovo fazzolettone.
+Sopra la nostra uniforme indossiamo il grigio, il colore della nostra città e lo scozzese, per ricordarci delle nostre origini, il Gruppo Scout Alessandria 1 che ha la sede proprio in quella chiesetta in centro che ogni anno si anima per la sua festa.
+Il nostro gruppo scout però, è nato per espatriare dal centro cittadino e per andare a operare al quartiere Cristo, zona periferica, ma con molte opportunità.
+Ecco, quel giorno lo scautismo alessandrino ha aperto la sua sede dall'altra parte della ferrovia e da lì non si è più spostato, accogliendo bambini ragazzi e adulti, pronti a vivere la grande avventura dello scautismo!
     `,
   },
   {
@@ -113,14 +77,9 @@ specifica nella comunità alessandrina.
     imageUrl: masci,
     socials: [
       {
-        type: 'instagram',
-        name: 'Instagram',
-        url: '#',
-      },
-      {
         type: 'facebook',
         name: 'Facebook',
-        url: '#',
+        url: 'https://www.facebook.com/MASCIPiemonte',
       },
     ],
     description: `
