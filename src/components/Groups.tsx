@@ -45,13 +45,13 @@ export default function Groups() {
               <ul role="list" className="mt-6 flex gap-x-6">
                 {group.socials.map((social) => (
                   <li key={social.type}>
-                    <a href={social.url}>
+                    <Link href={social.url} target={'_blank'}>
                       <span className="sr-only">{social.name}</span>
                       <FontAwesomeIcon
                         className="h-5 w-5"
                         icon={getSocialIcon(social.type)}
                       />
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
