@@ -15,7 +15,7 @@ export default function Home() {
         <Quote />
         <Groups />
         <Faqs />
-        {/*<Posts />*/}
+        <Posts />
       </Layout>
     </>
   )

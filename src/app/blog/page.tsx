@@ -23,7 +23,7 @@ export default async function Page({
   return (
     <>
       <Layout>
-        <Title title="Blog" subtitle="Ultime notizie da..." />
+        <Title title="Blog" />
         <Container className="">
           <div className="xl:relative">
             <div className="mx-auto space-y-10">
