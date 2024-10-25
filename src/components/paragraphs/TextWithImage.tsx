@@ -1,8 +1,26 @@
 import Image from 'next/image'
 import { createValidHtmlId } from '@/lib/string'
 import MarkdownLocal from '@/components/MarkdownLocal'
+import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {faFacebook, faInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
+import {faSurprise} from "@fortawesome/free-regular-svg-icons";
 
-const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
+function getSocialIcon(type: string): IconProp {
+  switch (type) {
+    case 'facebook':
+      return faFacebook
+    case 'instagram':
+      return faInstagram
+    case 'tiktok':
+      return faTiktok
+  }
+
+  return faSurprise
+}
+
+const TextWithImage = ({ children, image, imagePosition = 'right', title, socials }) => {
   let imageClass = 'lg:pl-20'
   let textClass = 'lg:order-first lg:row-span-2 lg:col-span-3'
 
@@ -25,14 +43,27 @@ const TextWithImage = ({ children, image, imagePosition = 'right', title }) => {
       </div>
       <div className={textClass}>
         <h2
-          className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl"
-          id={createValidHtmlId(title)}
+            className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl"
+            id={createValidHtmlId(title)}
         >
           {title}
         </h2>
         <div className="prose prose-zinc mt-6 space-y-7 prose-a:text-indigo-500">
-          <MarkdownLocal content={children} />
+          <MarkdownLocal content={children}/>
         </div>
+        <ul role="list" className="mt-6 flex gap-x-6">
+          {socials.map((social) => (
+              <li key={social.type}>
+                <Link href={social.url} target={'_blank'}>
+                  <span className="sr-only">{social.name}</span>
+                  <FontAwesomeIcon
+                      className="h-5 w-5"
+                      icon={getSocialIcon(social.type)}
+                  />
+                </Link>
+              </li>
+          ))}
+        </ul>
       </div>
     </div>
   )

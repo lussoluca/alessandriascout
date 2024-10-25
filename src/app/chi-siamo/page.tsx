@@ -12,7 +12,6 @@ export default function Page() {
       <Layout>
         <Title
           title="Chi siamo"
-          // subtitle="In Alessandria sono presenti 3 gruppi scout, ..."
         />
         <Container className="mb-20 space-y-10">
           {groups.map((group) => (
@@ -20,6 +19,7 @@ export default function Page() {
               image={group.imageUrl}
               imagePosition="left"
               title={group.name}
+              socials={group.socials}
               key={group.name}
             >
               {group.description}
