@@ -6,7 +6,7 @@ import Post from '@/components/Post'
 
 export default async function Posts() {
   const { isEnabled } = draftMode()
-  const postsData = await getLatestPosts(isEnabled, 2)
+  const postsData = await getLatestPosts(isEnabled, 6)
 
   return (
     <section
