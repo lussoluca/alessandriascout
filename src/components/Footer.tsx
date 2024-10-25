@@ -14,7 +14,9 @@ export default function Footer() {
     <footer className="mt-auto">
       <Container className="">
         <div className="py-16">
-          <Logo className="h-10 w-10" />
+          <Link href={'/'} className="hidden lg:block">
+            <Logo className="h-10 w-10" />
+          </Link>
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
               {mainMenu.map((item) => (
