@@ -14,8 +14,8 @@
     "defaults, not ie <= 11"
   ],
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.19.4",
-    "@contentful/rich-text-types": "^16.3.4",
+    "@contentful/rich-text-react-renderer": "^15.22.11",
+    "@contentful/rich-text-types": "^16.8.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
