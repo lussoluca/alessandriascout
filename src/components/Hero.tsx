@@ -33,12 +33,12 @@ export default function Hero() {
             >
               Iscrizione
             </Link>
-            <Link
-              href={'/chi-siamo'}
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Scopri chi siamo <span aria-hidden="true">→</span>
-            </Link>
+            {/*<Link*/}
+            {/*  href={'/chi-siamo'}*/}
+            {/*  className="text-sm font-semibold leading-6 text-gray-900"*/}
+            {/*>*/}
+            {/*  Scopri chi siamo <span aria-hidden="true">→</span>*/}
+            {/*</Link>*/}
           </div>
         </div>
       </div>
