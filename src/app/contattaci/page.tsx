@@ -18,7 +18,7 @@ export default function Page() {
             </a>
           </p>
           <p className="prose">
-            Per le iscrizioni alle unità dei gruppi scout cittadini, compila <a href="https://forms.gle/HpGs4c9kyUjc2Yar8">questo form</a>.
+            Per le iscrizioni alle unità dei gruppi scout cittadini, compila <a href="/iscrizione">questo form</a>.
           </p>
         </Container>
       </Layout>
