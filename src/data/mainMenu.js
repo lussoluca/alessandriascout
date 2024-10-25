@@ -7,10 +7,10 @@ export const mainMenu = [
     name: 'Chi siamo',
     href: '/chi-siamo',
   },
-  // {
-  //   name: 'Blog',
-  //   href: '/blog',
-  // },
+  {
+    name: 'Blog',
+    href: '/blog',
+  },
   {
     name: 'Contattaci',
     href: '/contattaci',
