@@ -19,13 +19,28 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    colors: {
+      'scouting-purple': '#622599',
+      'canvas-white': '#ffffff',
+      'midnight-purple': '#4d006e',
+      'blossom-pink': '#ff8dff',
+      'fire-red': '#ff5655',
+      'ember-orange': '#ffae80',
+      'ocean-blue': '#0094b4',
+      'river-blue': '#82e6de',
+      'forest-green': '#248737',
+      'leaf-green': '#9fed8f',
+    },
     extend: {
       borderRadius: {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
         display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        scout: ['Scouts GT Planar', 'sans-serif'],
+        scoutitalic: ['"Scouts GT Planar Italic 15 Bold"', 'sans-serif'],
+        scoutretalic: ['"Scouts GT Planar Retalic 15 Bold"', 'sans-serif'],
       },
       maxWidth: {
         '2xl': '40rem',

@@ -12,6 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="flex min-h-screen flex-col">
         {children}
         <SpeedInsights />

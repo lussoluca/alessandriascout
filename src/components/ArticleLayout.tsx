@@ -46,7 +46,7 @@ export default function ArticleLayout({children, meta}) {
                             <Link href="/blog">
                                 <div
                                     aria-hidden="true"
-                                    className="relative z-10 mt-4 flex items-center text-sm font-medium text-indigo-500"
+                                    className="relative z-10 mt-4 flex items-center text-sm font-medium text-scouting-purple"
                                 >
                                     Torna al blog
                                     <svg
@@ -65,15 +65,15 @@ export default function ArticleLayout({children, meta}) {
                                 </div>
                             </Link>
 
-                            <h1 className="mb-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+                            <h1 className="mb-6 text-4xl font-bold tracking-tight text-ocean-blue sm:text-5xl">
                                 {meta.title}
                             </h1>
-                            <div className="flex items-center text-base text-zinc-400">
+                            <div className="flex items-center text-base">
                                 Scritto da {meta.author.name}
                             </div>
                             <time
                                 dateTime={meta.date}
-                                className="mb-6 flex items-center text-base text-zinc-400"
+                                className="mb-6 flex items-center text-base"
                             >
                 <span className="">
                   <DateFormatter dateString={meta.date}/>

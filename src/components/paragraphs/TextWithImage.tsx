@@ -43,12 +43,12 @@ const TextWithImage = ({ children, image, imagePosition = 'right', title, social
       </div>
       <div className={textClass}>
         <h2
-            className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl"
+            className="text-2xl font-bold tracking-tight text-ocean-blue sm:text-3xl"
             id={createValidHtmlId(title)}
         >
           {title}
         </h2>
-        <div className="prose prose-zinc mt-6 space-y-7 prose-a:text-indigo-500">
+        <div className="prose prose-ocean-blue mt-6 space-y-7 prose-a:text-scouting-purple">
           <MarkdownLocal content={children}/>
         </div>
         <ul role="list" className="mt-6 flex gap-x-6">

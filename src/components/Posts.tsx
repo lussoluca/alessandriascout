@@ -18,7 +18,7 @@ export default async function Posts() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="post-title"
-            className="mb-10 font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            className="mb-10 text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
             Dal blog
           </h2>
@@ -31,7 +31,7 @@ export default async function Posts() {
         <div className="mt-10 flex justify-center">
           <Link
             href="/blog"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-scouting-purple px-3.5 py-2.5 text-sm font-semibold text-canvas-white shadow-sm hover:bg-scouting-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-scouting-purple"
           >
             Leggili tutti
           </Link>
