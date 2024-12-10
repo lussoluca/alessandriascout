@@ -14,7 +14,7 @@ export default async function Post(post: PostType) {
         </a>
       </h2>
       <time
-        className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-ocean-blue"
+        className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm"
         dateTime={post.date}
       >
         <span
