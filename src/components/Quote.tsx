@@ -3,7 +3,7 @@ export default function Quote() {
     <section className="relative isolate hidden overflow-hidden p-6 px-6 lg:block lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <figure className="mt-10">
-          <blockquote className="text-center text-sm text-gray-900 sm:text-xl sm:leading-9">
+          <blockquote className="text-center text-sm text-gray-900 sm:text-xl">
             <p>
               &quot;Il vero modo di essere felici è quello di procurare la
               felicità agli altri.
