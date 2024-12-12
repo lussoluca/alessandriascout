@@ -6,6 +6,8 @@ import Logo from '@/components/Logo'
 import { mainMenu } from '@/data/mainMenu'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import parcival from '@/images/groups/parcival.png'
+import Image from 'next/image'
 
 export default function Footer() {
   const pathname = usePathname()
@@ -16,6 +18,11 @@ export default function Footer() {
         <div className="py-16">
           <Link href={'/'} className="hidden lg:block">
             <Logo className="h-10 w-10" />
+          </Link>
+          <Link href={'https://www.parcivalets.it'} target='_blank' className="hidden lg:block">
+            <div className="mt-5 flex items-center justify-center">
+              <Image src={parcival} alt="parcival" className="h-12 w-auto" />
+            </div>
           </Link>
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">

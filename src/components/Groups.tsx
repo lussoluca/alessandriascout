@@ -31,7 +31,7 @@ export default function Groups() {
         >
           {groups.map((group) => (
             <li key={group.name}>
-              {/*<Link href={`chi-siamo#` + createValidHtmlId(group.name)}>*/}
+              <Link href={`chi-siamo#` + createValidHtmlId(group.name)}>
                 <Image
                   className="w-full object-cover"
                   src={group.imageUrl}
@@ -45,7 +45,7 @@ export default function Groups() {
                 <p className="text-base leading-7 text-gray-600">
                   {group.place}
                 </p>
-              {/*</Link>*/}
+              </Link>
               <ul role="list" className="mt-6 flex gap-x-6">
                 {group.socials.map((social) => (
                   <li key={social.type}>

@@ -21,18 +21,7 @@ export const groups = [
       },
     ],
     description: `
-Il gruppo nasce nel 1977 quando alcuni membri dell’allora unica realtà
-associativa esistente, l’Alessandria 1, decidono di sviluppare la presenza degli
-scouts nel territorio con coraggio e tanta voglia di fare danno vita ad un nuovo
-gruppo che trova ospitalità per circa 20 anni presso l’Istituto Don Orione.
-
-Nel 1997 la sede viene spostata dall’Istituto Don Orione alla Cattedrale
-divenendo una forte realtà nella vita della parrocchia anche grazie
-all’accoglienza ed all’ospitalità ricevuta prima da Don Mario Gonella e poi da
-Don Gianni Torriggia, attuale parroco della Cattedrale, che segue il gruppo
-nelle sue iniziative. Negli anni si sono succeduti diverse figure che hanno
-seguito il cammino di catechesi sia della Comunità Capi che delle singole
-Branche.
+Siamo un gruppo scout AGESCI che accoglie e accompagna bambini e ragazzi dagli 8 ai 20 anni. Il gruppo è suddiviso in tre unità legate alle diverse fasce d'età e i soci adulti prestano servizio all'interno della Comunità Capi, a supporto dell'azione educativa. Le unità sono: Branco Bruma di Seeonee (8-12), Reparto Don Alessandro Benzi (12-16), Clan del Nord (16-20).
     `,
   },
   {
