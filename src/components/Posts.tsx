@@ -1,5 +1,5 @@
 import Container from '@/components/Container'
-import { getLatestPosts } from '@/lib/api'
+import { getLatestPosts } from '@/lib/api_posts'
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
 import Post from '@/components/Post'

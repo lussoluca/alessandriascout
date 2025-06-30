@@ -12,6 +12,10 @@ export const mainMenu = [
     href: '/blog',
   },
   {
+    name: 'Risorse',
+    href: '/risorse',
+  },
+  {
     name: 'Contattaci',
     href: '/contattaci',
   },

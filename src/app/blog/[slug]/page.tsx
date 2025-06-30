@@ -1,4 +1,4 @@
-import { getAllPosts, getPost } from '@/lib/api'
+import { getAllPosts, getPost } from '@/lib/api_posts'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
 import { Markdown } from '@/components/Markdown'

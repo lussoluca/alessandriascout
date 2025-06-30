@@ -1,6 +1,6 @@
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { getPreviewPostBySlug } from '@/lib/api_posts'
+import { getPreviewResourceBySlug } from '@/lib/api_resources'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -11,12 +11,12 @@ export async function GET(request: Request) {
     return new Response('Invalid token', { status: 401 })
   }
 
-  const post = await getPreviewPostBySlug(slug)
+  const resource = await getPreviewResourceBySlug(slug)
 
-  if (!post) {
+  if (!resource) {
     return new Response('Invalid slug', { status: 401 })
   }
 
   draftMode().enable()
-  redirect(`/blog/${post.slug}`)
+  redirect(`/risorse/${resource.slug}`)
 }
