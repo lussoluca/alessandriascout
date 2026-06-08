@@ -9,14 +9,15 @@ import { draftMode } from 'next/headers'
 import ResourceLayout from '@/components/ResourceLayout'
 
 type Params = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function Resource({ params }: Params) {
-  const { isEnabled } = draftMode()
-  const resourceData: Promise<any> = getResource(params.slug, isEnabled)
+  const { slug } = await params
+  const { isEnabled } = await draftMode()
+  const resourceData: Promise<any> = getResource(slug, isEnabled)
   const { resource } = await resourceData
 
   if (!resource) {
@@ -37,8 +38,9 @@ export default async function Resource({ params }: Params) {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const { isEnabled } = draftMode()
-  const resourceData: Promise<any> = getResource(params.slug, isEnabled)
+  const { slug } = await params
+  const { isEnabled } = await draftMode()
+  const resourceData: Promise<any> = getResource(slug, isEnabled)
   const { resource } = await resourceData
   const title: string = `${resource.title} | ${TITLE}`
 
@@ -47,15 +49,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 }
 
-export async function generateStaticParams(): Promise<Params[]> {
+export async function generateStaticParams() {
   const resourcesData: Promise<any[]> = getAllResources(false)
   const resources = await resourcesData
 
-  return resources.map(
-    (resource): Params => ({
-      params: {
-        slug: resource.slug.toString(),
-      },
-    }),
-  )
+  return resources.map((resource) => ({
+    slug: resource.slug.toString(),
+  }))
 }

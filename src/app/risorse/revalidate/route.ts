@@ -1,5 +1,3 @@
-'use server'
-
 import { revalidateTag } from 'next/cache'
 
 export async function POST(request: Request) {
@@ -10,7 +8,7 @@ export async function POST(request: Request) {
     return Response.json({ message: 'Invalid secret' }, { status: 401 })
   }
 
-  revalidateTag('resources')
+  revalidateTag('resources', 'default')
 
   return Response.json({ revalidated: true, now: Date.now() })
 }

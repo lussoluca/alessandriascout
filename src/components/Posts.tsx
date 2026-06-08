@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Post from '@/components/Post'
 
 export default async function Posts() {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const postsData = await getLatestPosts(isEnabled, 6)
 
   return (

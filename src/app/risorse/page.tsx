@@ -11,13 +11,14 @@ import { draftMode } from 'next/headers'
 export default async function Page({
   searchParams,
 }: {
-  searchParams?: {
+  searchParams?: Promise<{
     page?: string
-  }
+  }>
 }) {
-  const currentPage = Number(searchParams?.page) || 1
+  const resolvedSearchParams = await searchParams
+  const currentPage = Number(resolvedSearchParams?.page) || 1
   const totalPages = await getResourcesCount()
-  const { isEnabled } = draftMode()
+  const { isEnabled } = await draftMode()
   const resourcesData = await getPagedResources(currentPage, isEnabled)
 
   return (

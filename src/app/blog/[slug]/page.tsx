@@ -9,14 +9,15 @@ import { draftMode } from 'next/headers'
 import ArticleLayout from '@/components/ArticleLayout'
 
 type Params = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function Post({ params }: Params) {
-  const { isEnabled } = draftMode()
-  const postData: Promise<any> = getPost(params.slug, isEnabled)
+  const { slug } = await params
+  const { isEnabled } = await draftMode()
+  const postData: Promise<any> = getPost(slug, isEnabled)
   const { post } = await postData
 
   if (!post) {
@@ -37,8 +38,9 @@ export default async function Post({ params }: Params) {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const { isEnabled } = draftMode()
-  const postData: Promise<any> = getPost(params.slug, isEnabled)
+  const { slug } = await params
+  const { isEnabled } = await draftMode()
+  const postData: Promise<any> = getPost(slug, isEnabled)
   const { post } = await postData
   const title: string = `${post.title} | ${TITLE}`
 
@@ -47,15 +49,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 }
 
-export async function generateStaticParams(): Promise<Params[]> {
+export async function generateStaticParams() {
   const postsData: Promise<any[]> = getAllPosts(false)
   const posts = await postsData
 
-  return posts.map(
-    (post): Params => ({
-      params: {
-        slug: post.slug.toString(),
-      },
-    }),
-  )
+  return posts.map((post) => ({
+    slug: post.slug.toString(),
+  }))
 }
