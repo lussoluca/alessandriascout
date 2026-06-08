@@ -27,10 +27,10 @@ export default function Groups() {
       <Container className="">
         <ul
           role="list"
-          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-5"
         >
           {groups.map((group) => (
-            <li key={group.name}>
+            <li key={group.name} className="text-center">
               <Link href={`chi-siamo#` + createValidHtmlId(group.name)}>
                 <Image
                   className="w-full object-cover"
@@ -46,7 +46,7 @@ export default function Groups() {
                   {group.place}
                 </p>
               </Link>
-              <ul role="list" className="mt-6 flex gap-x-6">
+              <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {group.socials.map((social) => (
                   <li key={social.type}>
                     <Link href={social.url} target={'_blank'}>

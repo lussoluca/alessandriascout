@@ -2,6 +2,7 @@ import alessandria_1 from '@/images/groups/alessandria_1.png'
 import alessandria_2 from '@/images/groups/alessandria_2.png'
 import alessandria_3 from '@/images/groups/alessandria_3.png'
 import masci from '@/images/groups/masci.png'
+import cascina_brownsea from '@/images/groups/cascina_brownsea.png'
 
 export const groups = [
   {
@@ -114,6 +115,27 @@ Quindi, se crediamo nello Scautismo vissuto da adulti e vogliamo costruire qualc
 Il Movimento Adulti Scout Cattolici Italiani, con le sue strutture ed attività regionali e nazionali, offre quanto serve ad una Comunità.
 
 Ci trovate presso la Parrocchia di Santo Stefano, in piazza Santo Stefano 8,  Alessandria centro città ([alessandria@masci.it](mailto://alessandria@masci.it); [infomasci@alessandriascout.it](mailto://infomasci@alessandriascout.it))
+    `,
+  },
+  {
+    name: 'Cascina Brownsea',
+    place: 'Pietra Marazzi (AL)',
+    imageUrl: cascina_brownsea,
+    socials: [
+      {
+        type: 'facebook',
+        name: 'Facebook',
+        url: 'https://www.facebook.com/people/Casa-Scout-Cascina-Brownsea/100065052721867/',
+      },
+    ],
+    description: `
+La Casa Scout "Cascina Brownsea" è una casa in autogestione immersa nel verde a Pietra Marazzi, in provincia di Alessandria, lungo la Strada Vicinale della Curetta. È pensata per accogliere gruppi scout, associazioni e famiglie per vacanze, campi e uscite.
+
+La struttura si sviluppa su due piani e dispone di due ampie camerate con letti a castello, ognuna in grado di ospitare circa 20-25 persone. Al piano terra si trovano una cucina attrezzata, una sala da pranzo, una sala con camino e un grande tavernone con varie attrezzature, utile per i giochi al coperto nelle giornate di pioggia.
+
+All'esterno la casa offre un prato antistante e ulteriori prati nella parte sottostante, spazi verdi adatti al campeggio e all'attività all'aria aperta, oltre ad ampio parcheggio.
+
+Per informazioni e prenotazioni: [cascina.brownsea@gmail.com](mailto:cascina.brownsea@gmail.com)
     `,
   },
 ]
