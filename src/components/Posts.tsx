@@ -31,7 +31,7 @@ export default async function Posts() {
         <div className="mt-10 flex justify-center">
           <Link
             href="/blog"
-            className="rounded-md bg-scouting-purple px-3.5 py-2.5 text-sm font-semibold text-canvas-white shadow-sm hover:bg-scouting-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-scouting-purple"
+            className="bg-scouting-purple text-canvas-white hover:bg-scouting-purple focus-visible:outline-scouting-purple rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Leggili tutti
           </Link>

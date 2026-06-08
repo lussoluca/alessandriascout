@@ -1,7 +1,7 @@
-@import "tailwindcss";
-@config "../../tailwind.config.js";
-@plugin "@tailwindcss/forms";
-@plugin "@tailwindcss/typography";
+@import 'tailwindcss';
+@config '../../tailwind.config.js';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
 @layer base {
   @font-face {
@@ -35,6 +35,6 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

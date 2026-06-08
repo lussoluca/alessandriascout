@@ -65,7 +65,9 @@ function extractResourceEntries(fetchResponse: any): Resource[] {
   return fetchResponse?.data?.resourceCollection?.items
 }
 
-export async function getPreviewResourceBySlug(slug: string | null): Promise<any> {
+export async function getPreviewResourceBySlug(
+  slug: string | null,
+): Promise<any> {
   const entry = await fetchGraphQL(
     `query {
       resourceCollection(where: { slug: "${slug}" }, preview: true, limit: 1) {
@@ -128,7 +130,9 @@ export async function getResourcesCount(): Promise<number> {
     false,
   )
 
-  return Math.ceil(Number(count?.data?.resourceCollection?.total) / ITEMS_PER_PAGE)
+  return Math.ceil(
+    Number(count?.data?.resourceCollection?.total) / ITEMS_PER_PAGE,
+  )
 }
 
 export async function getLatestResources(
@@ -151,7 +155,10 @@ export async function getLatestResources(
   return extractResourceEntries(entries)
 }
 
-export async function getResource(slug: string, preview: boolean): Promise<any> {
+export async function getResource(
+  slug: string,
+  preview: boolean,
+): Promise<any> {
   const entry = await fetchGraphQL(
     `query {
       resourceCollection(where: { slug: "${slug}" }, preview: ${

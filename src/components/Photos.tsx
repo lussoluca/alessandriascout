@@ -12,12 +12,12 @@ export default function Photos() {
 
   return (
     <div className="mb-20 pt-10 sm:mt-0 lg:mb-0">
-      <div className="-my-4 flex no-scrollbar 2xl:justify-center gap-5 2xl:overflow-hidden overflow-y-scroll py-4 sm:gap-8">
+      <div className="no-scrollbar -my-4 flex gap-5 overflow-y-scroll py-4 sm:gap-8 2xl:justify-center 2xl:overflow-hidden">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-ocean-blue sm:w-72 sm:rounded-2xl',
+              'bg-ocean-blue relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -26,6 +26,7 @@ export default function Photos() {
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
+              priority={imageIndex < 2}
             />
           </div>
         ))}

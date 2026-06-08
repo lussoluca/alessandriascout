@@ -10,9 +10,7 @@ export default function Page() {
   return (
     <>
       <Layout>
-        <Title
-          title="Chi siamo"
-        />
+        <Title title="Chi siamo" />
         <Container className="mb-20 space-y-10">
           {groups.map((group) => (
             <TextWithImage

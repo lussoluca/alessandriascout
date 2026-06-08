@@ -56,7 +56,7 @@ Nel 1997 la sede viene spostata dall’Istituto Don Orione alla Cattedrale diven
         type: 'tiktok',
         name: 'TikTok',
         url: 'https://www.tiktok.com/@grupposcouta|3',
-      }
+      },
     ],
     description: `
 Sono passati 25 anni da quel 13 dicembre 1996 quando il fazzolettone del nostro gruppo fu indossato per la prima volta.

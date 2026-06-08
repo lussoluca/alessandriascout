@@ -11,14 +11,14 @@ export default function Page() {
         <Title title="Contattaci" />
         <Container className="mb-20 space-y-10">
           <p className="prose">
-            Per qualsiasi
-            informazione scrivici a{' '}
+            Per qualsiasi informazione scrivici a{' '}
             <a href="mailto:admin@alessandriascout.it">
               admin@alessandriascout.it
             </a>
           </p>
           <p className="prose">
-            Per le iscrizioni alle unità dei gruppi scout cittadini, compila <a href="/iscrizione">questo form</a>.
+            Per le iscrizioni alle unità dei gruppi scout cittadini, compila{' '}
+            <a href="/iscrizione">questo form</a>.
           </p>
         </Container>
       </Layout>

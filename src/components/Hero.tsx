@@ -18,7 +18,12 @@ export default function Hero() {
       <div className="mx-auto max-w-2xl pb-8 sm:pb-8">
         <div className="text-center">
           <h1>
-            <span className="font-scoutitalic text-2xl tracking-tight text-scouting-purple sm:text-4xl md:text-6xl">Alessandria</span><span className="font-scout text-2xl tracking-tight text-scouting-purple sm:text-4xl md:text-6xl">Scout</span>
+            <span className="font-scoutitalic text-scouting-purple text-2xl tracking-tight sm:text-4xl md:text-6xl">
+              Alessandria
+            </span>
+            <span className="font-scout text-scouting-purple text-2xl tracking-tight sm:text-4xl md:text-6xl">
+              Scout
+            </span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Benvenuti sul sito dello scautismo alessandrino, promosso dai Gruppi
@@ -29,7 +34,7 @@ export default function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href={'/iscrizione'}
-              className="rounded-md bg-scouting-purple px-3.5 py-2.5 text-sm font-semibold text-canvas-white shadow-sm hover:bg-midnight-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-scouting-purple"
+              className="bg-scouting-purple text-canvas-white hover:bg-midnight-purple focus-visible:outline-scouting-purple rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               Iscrizione
             </Link>

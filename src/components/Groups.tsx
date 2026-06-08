@@ -4,7 +4,11 @@ import Container from '@/components/Container'
 import Link from 'next/link'
 import { createValidHtmlId } from '@/lib/string'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons'
+import {
+  faInstagram,
+  faFacebook,
+  faTiktok,
+} from '@fortawesome/free-brands-svg-icons'
 import { faSurprise } from '@fortawesome/free-regular-svg-icons'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
@@ -29,7 +33,7 @@ export default function Groups() {
           role="list"
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-5"
         >
-          {groups.map((group) => (
+          {groups.map((group, groupIndex) => (
             <li key={group.name} className="text-center">
               <Link href={`chi-siamo#` + createValidHtmlId(group.name)}>
                 <Image
@@ -38,8 +42,9 @@ export default function Groups() {
                   alt={group.name}
                   width={280}
                   height={280}
+                  priority={groupIndex === 0}
                 />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                <h3 className="mt-6 text-lg leading-8 font-semibold tracking-tight text-gray-900">
                   {group.name}
                 </h3>
                 <p className="text-base leading-7 text-gray-600">

@@ -7,7 +7,7 @@ export default function Faqs() {
   return (
     <div className="relative -z-10 mt-16 px-6 lg:px-8">
       <div
-        className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
+        className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:top-auto sm:right-[calc(50%-6rem)] sm:bottom-0 sm:translate-y-0 sm:transform-gpu sm:justify-end"
         aria-hidden="true"
       >
         <div
@@ -39,7 +39,10 @@ export default function Faqs() {
                     <h3 className="text-lg leading-7 text-slate-900">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
+                    <p
+                      className="mt-4 text-sm text-slate-700"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    ></p>
                   </li>
                 ))}
               </ul>
@@ -48,7 +51,7 @@ export default function Faqs() {
         </ul>
       </Container>
       <div
-        className="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
+        className="absolute top-full right-0 left-1/2 -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
         aria-hidden="true"
       >
         <div

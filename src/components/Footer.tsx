@@ -19,7 +19,11 @@ export default function Footer() {
           <Link href={'/'} className="hidden lg:block">
             <Logo className="h-10 w-10" />
           </Link>
-          <Link href={'https://www.parcivalets.it'} target='_blank' className="hidden lg:block">
+          <Link
+            href={'https://www.parcivalets.it'}
+            target="_blank"
+            className="hidden lg:block"
+          >
             <div className="mt-5 flex items-center justify-center">
               <Image src={parcival} alt="parcival" className="h-12 w-auto" />
             </div>
