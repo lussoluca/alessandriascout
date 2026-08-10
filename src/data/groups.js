@@ -40,6 +40,8 @@ Siamo un gruppo scout AGESCI che accoglie e accompagna bambini e ragazzi dagli 8
 L’Alessandria 2 è uno dei tre gruppi scout presenti nel territorio alessandrino, ha la propria sede presso i locali adiacenti la Cattedrale della città. Il suo fazzolettone, per metà bianco e per l’altra metà rosso, rappresenta i colori della città di Alessandria.
 Il gruppo nasce nel 1977 quando alcuni membri dell’allora unica realtà associativa esistente, l’Alessandria 1, decidono di sviluppare la presenza degli scouts nel territorio con coraggio e tanta voglia di fare danno vita ad un nuovo gruppo che trova ospitalità per circa 20 anni presso l’Istituto Don Orione.
 Nel 1997 la sede viene spostata dall’Istituto Don Orione alla Cattedrale divenendo una forte realtà nella vita della parrocchia anche grazie all’accoglienza ed all’ospitalità ricevuta prima da Don Mario Gonella e poi da Don Gianni Torriggia, attuale parroco della Cattedrale, che segue il gruppo nelle sue iniziative. Negli anni si sono succeduti diverse figure che hanno seguito il cammino di catechesi sia della Comunità Capi che delle singole Branche.
+
+Il gruppo cura un [canzoniere online](https://lussoluca.github.io/canzoniere/) con i canti usati nelle attività: si sfoglia dal telefono, con accordi e trasposizione, e si può scaricare in PDF.
     `,
   },
   {
