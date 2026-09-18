@@ -46,5 +46,5 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: `Contattaci | ${TITLE}`,
+  title: `Iscrizione | ${TITLE}`,
 }
