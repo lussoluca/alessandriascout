@@ -32,6 +32,18 @@ const POST_GRAPHQL_FIELDS = `
       }
     }
   }
+  imagesCollection(limit: 30) {
+    items {
+      sys {
+        id
+      }
+      url
+      title
+      description
+      width
+      height
+    }
+  }
   contentfulMetadata {
     tags {
         id

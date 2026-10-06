@@ -39,7 +39,6 @@ export default function PostThumbnail({
             aria-hidden="true"
             fill
             sizes="200px"
-            quality={30}
             className="scale-125 object-cover opacity-70 blur-2xl"
           />
           <ContentfulImage

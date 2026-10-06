@@ -5,6 +5,7 @@ import { BLOCKS } from '@contentful/rich-text-types'
 import Prose from '@/components/Prose'
 import DateFormatter from '@/components/DateFormatter'
 import Post from '@/components/Post'
+import PostGallery from '@/components/PostGallery'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -180,6 +181,11 @@ export default function ArticleLayout({
               renderOptions(meta.content.links, meta.title),
             )}
         </Prose>
+
+        {/* Resources have no images field, so this only renders for posts. */}
+        {meta.imagesCollection?.items?.length > 0 && (
+          <PostGallery images={meta.imagesCollection.items.filter(Boolean)} />
+        )}
 
         <div className="mt-16 border-t border-gray-200 pt-8">
           <Link
