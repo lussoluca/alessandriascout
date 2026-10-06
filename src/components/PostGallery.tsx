@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -74,6 +74,9 @@ export default function PostGallery({
   })
   const [selected, setSelected] = useState(0)
   const [lightboxIndex, setLightboxIndex] = useState(-1)
+  // The lightbox resets to `index` whenever `slides` changes identity, so keep
+  // both stable while it is open.
+  const slides = useMemo(() => images.map(lightboxSlide), [images])
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return
@@ -231,8 +234,13 @@ export default function PostGallery({
         open={lightboxIndex >= 0}
         index={lightboxIndex}
         close={() => setLightboxIndex(-1)}
-        on={{ view: ({ index }) => emblaApi?.scrollTo(index, true) }}
-        slides={images.map(lightboxSlide)}
+        on={{
+          view: ({ index }) => {
+            setLightboxIndex(index)
+            emblaApi?.scrollTo(index, true)
+          },
+        }}
+        slides={slides}
         plugins={[Captions, Counter, Zoom]}
         carousel={{ finite: !multiple }}
         render={
