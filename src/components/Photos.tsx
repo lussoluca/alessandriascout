@@ -8,7 +8,7 @@ import image4 from '@/images/photos/giornata_terra.jpeg'
 import image5 from '@/images/photos/DSC_0217.jpeg'
 
 export default function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
     <div className="mb-20 pt-10 sm:mt-0 lg:mb-0">

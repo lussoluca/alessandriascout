@@ -16,7 +16,7 @@ function renderOptions(links) {
 
   return {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node, next) => {
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
         // find the asset in the assetMap by ID
         const asset = assetMap.get(node.data.target.sys.id)
 
@@ -36,7 +36,7 @@ function renderOptions(links) {
   }
 }
 
-export default function ArticleLayout({ children, meta }) {
+export default function ArticleLayout({ meta }) {
   return (
     <>
       <div className="xl:relative">

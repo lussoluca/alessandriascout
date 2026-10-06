@@ -1,7 +1,6 @@
 import { getAllPosts, getPost } from '@/lib/api_posts'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
-import { Markdown } from '@/components/Markdown'
 import { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
@@ -28,9 +27,7 @@ export default async function Post({ params }: Params) {
     <>
       <Layout>
         <Container className="mb-20 space-y-10">
-          <ArticleLayout meta={post}>
-            <Markdown content={post.content} />
-          </ArticleLayout>
+          <ArticleLayout meta={post} />
         </Container>
       </Layout>
     </>
