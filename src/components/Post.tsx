@@ -3,8 +3,8 @@ import DateFormatter from '@/components/DateFormatter'
 import PostThumbnail from '@/components/PostThumbnail'
 import PostType from '@/interfaces/post'
 
-// Card used in the homepage "Dal blog" grid.
-export default function Post(post: PostType) {
+// Card used in the homepage "Dal blog" grid and in "related" lists.
+export default function Post({ href, ...post }: PostType & { href?: string }) {
   return (
     <article className="group relative flex flex-col">
       <PostThumbnail
@@ -19,7 +19,7 @@ export default function Post(post: PostType) {
         <DateFormatter dateString={post.date} />
       </div>
       <h3 className="group-hover:text-ocean-blue text-midnight-purple mt-2 line-clamp-2 text-lg font-semibold tracking-tight transition-colors">
-        <Link href={`/blog/${post.slug}`}>
+        <Link href={href ?? `/blog/${post.slug}`}>
           <span className="absolute inset-0 z-10" />
           {post.title}
         </Link>

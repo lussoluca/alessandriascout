@@ -1,4 +1,4 @@
-import { getAllPosts, getPost } from '@/lib/api_posts'
+import { getAllPosts, getPost, getLatestPosts } from '@/lib/api_posts'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
@@ -23,11 +23,23 @@ export default async function Post({ params }: Params) {
     notFound()
   }
 
+  const latest = await getLatestPosts(isEnabled, 4)
+  const related = (latest ?? [])
+    .filter((item) => item.slug !== slug)
+    .slice(0, 3)
+
   return (
     <>
       <Layout>
-        <Container className="mb-20 space-y-10">
-          <ArticleLayout meta={post} />
+        <Container className="mb-24">
+          <ArticleLayout
+            meta={post}
+            backHref="/blog"
+            backLabel="Torna al blog"
+            related={related}
+            relatedTitle="Altri articoli"
+            relatedHref={(relatedSlug) => `/blog/${relatedSlug}`}
+          />
         </Container>
       </Layout>
     </>

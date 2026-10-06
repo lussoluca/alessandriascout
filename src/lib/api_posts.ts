@@ -26,6 +26,8 @@ const POST_GRAPHQL_FIELDS = `
           }
           url
           description
+          width
+          height
         }
       }
     }

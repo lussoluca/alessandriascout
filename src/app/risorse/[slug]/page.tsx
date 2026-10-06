@@ -1,11 +1,15 @@
-import { getAllResources, getResource } from '@/lib/api_resources'
+import {
+  getAllResources,
+  getResource,
+  getLatestResources,
+} from '@/lib/api_resources'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
 import { draftMode } from 'next/headers'
-import ResourceLayout from '@/components/ResourceLayout'
+import ArticleLayout from '@/components/ArticleLayout'
 
 type Params = {
   params: Promise<{
@@ -23,11 +27,23 @@ export default async function Resource({ params }: Params) {
     notFound()
   }
 
+  const latest = await getLatestResources(isEnabled, 4)
+  const related = (latest ?? [])
+    .filter((item) => item.slug !== slug)
+    .slice(0, 3)
+
   return (
     <>
       <Layout>
-        <Container className="mb-20 space-y-10">
-          <ResourceLayout meta={resource} />
+        <Container className="mb-24">
+          <ArticleLayout
+            meta={resource}
+            backHref="/risorse"
+            backLabel="Torna alle risorse"
+            related={related}
+            relatedTitle="Altre risorse"
+            relatedHref={(relatedSlug) => `/risorse/${relatedSlug}`}
+          />
         </Container>
       </Layout>
     </>

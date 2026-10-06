@@ -26,6 +26,8 @@ const RESOURCE_GRAPHQL_FIELDS = `
           }
           url
           description
+          width
+          height
         }
       }
     }
