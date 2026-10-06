@@ -1,7 +1,6 @@
 import { getAllResources, getResource } from '@/lib/api_resources'
 import { TITLE } from '@/lib/constants'
 import { notFound } from 'next/navigation'
-import { Markdown } from '@/components/Markdown'
 import { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import Container from '@/components/Container'
@@ -28,9 +27,7 @@ export default async function Resource({ params }: Params) {
     <>
       <Layout>
         <Container className="mb-20 space-y-10">
-          <ResourceLayout meta={resource}>
-            <Markdown content={resource.content} />
-          </ResourceLayout>
+          <ResourceLayout meta={resource} />
         </Container>
       </Layout>
     </>

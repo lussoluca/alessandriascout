@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import { faqs } from '@/data/faq'
 import Container from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
 
 export default function Faqs() {
   return (

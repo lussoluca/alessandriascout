@@ -23,12 +23,12 @@ export default async function Posts() {
             Dal blog
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {postsData.map((post) => (
             <Post key={post.slug} {...post} />
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-14 flex justify-center">
           <Link
             href="/blog"
             className="bg-scouting-purple text-canvas-white hover:bg-scouting-purple focus-visible:outline-scouting-purple rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"

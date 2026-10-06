@@ -4,13 +4,15 @@ type PostType = {
   slug: string
   title: string
   date: string
-  coverImage?: string
+  coverImage?: {
+    url: string
+  }
   author: Author
   excerpt: string
   ogImage: {
     url: string
   }
-  content: string
+  content: any
   tags: string[]
 }
 

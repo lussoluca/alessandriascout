@@ -1,31 +1,34 @@
+import Link from 'next/link'
 import DateFormatter from '@/components/DateFormatter'
+import PostThumbnail from '@/components/PostThumbnail'
 import PostType from '@/interfaces/post'
 
-export default async function Post(post: PostType) {
+// Card used in the homepage "Dal blog" grid.
+export default function Post(post: PostType) {
   return (
-    <article
-      className="group relative flex flex-col items-start"
-      key={post.slug}
-    >
-      <h2 className="text-ocean-blue text-base font-semibold tracking-tight">
-        <a href={`/blog/${post.slug}`}>
-          <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-          <span className="relative z-10">{post.title}</span>
-        </a>
-      </h2>
-      <time
-        className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm"
-        dateTime={post.date}
-      >
+    <article className="group relative flex flex-col">
+      <PostThumbnail
+        post={post}
+        sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
+      />
+      <div className="text-midnight-purple/60 mt-5 flex items-center text-sm">
         <span
-          className="absolute inset-y-0 left-0 flex items-center"
+          className="bg-ocean-blue mr-3 h-4 w-0.5 rounded-full"
           aria-hidden="true"
-        >
-          <span className="bg-ocean-blue h-4 w-0.5 rounded-full"></span>
-        </span>
+        />
         <DateFormatter dateString={post.date} />
-      </time>
-      <p className="relative z-10 mt-2 mb-5 text-sm">{post.excerpt}</p>
+      </div>
+      <h3 className="group-hover:text-ocean-blue text-midnight-purple mt-2 line-clamp-2 text-lg font-semibold tracking-tight transition-colors">
+        <Link href={`/blog/${post.slug}`}>
+          <span className="absolute inset-0 z-10" />
+          {post.title}
+        </Link>
+      </h3>
+      {post.excerpt && (
+        <p className="text-midnight-purple/80 mt-2 line-clamp-3 text-sm">
+          {post.excerpt}
+        </p>
+      )}
     </article>
   )
 }

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "pretty": "prettier --write .",
     "revalidate-local": "curl -X POST -H 'x-vercel-reval-key: pluto' http://localhost:3000/blog/revalidate"
   },
